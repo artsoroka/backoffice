@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>backoffice</title>
+</head>
+<body>
+
+	<script src="https://fb.me/react-0.13.3.js"></script>
+	<script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+	<script type="text/jsx">
+		var App = React.createClass({
+			render: function(){
+				return(
+					<div>
+						Welcome to {this.props.name}
+					</div>
+				); 
+			}
+		});  
+
+		React.render(<App name="backoffice" />, document.body); 
+	</script>
+
+</body>
+</html>
