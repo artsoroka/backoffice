@@ -1,7 +1,14 @@
-var http = require('http'); 
-var fs 	 = require('fs'); 
-var page = fs.readFileSync('./mainpage.htm'); 
+var express = require('express'); 
+var app     = express(); 
+var fs 	    = require('fs'); 
+var page    = fs.readFileSync('./mainpage.htm'); 
 
-http.createServer(function(req,res){
-	res.end(page); 
-}).listen(8990); 
+app.use(express.static(__dirname + '/public')); 
+
+app.get('/', function(req,res){
+  res
+    .header('Content-Type', 'text/html')
+    .send(page); 
+}); 
+
+app.listen(8990); 

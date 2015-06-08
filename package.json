@@ -11,5 +11,8 @@
     "url": "https://github.com/artsoroka/backoffice"
   },
   "author": "Artem Soroka <art.soroka@yandex.ru>",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "express": "~4.12.4"
+  }
 }
